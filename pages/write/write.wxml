@@ -1,0 +1,48 @@
+<!--pages/write/write.wxml-->
+
+<!-- 文章标题 -->
+<view class='title-container'>
+  <view class='title-style'>{{title}}</view>
+</view>
+
+<!-- 留言文本域 -->
+<view class='text-message-container'>
+  <textarea class='textarea-style'
+    bindinput='getmessages'
+    placeholder='留言将由作者筛选后，对所有人可见。'
+    placeholder-style='font-size: 32rpx; background-color: #ccc;'
+    maxlength='500'
+    value='{{messagesnull}}'
+    auto-focus='true'>
+  </textarea>
+</view>
+
+<!--留言提交区域 -->
+<view class='submit-area'>
+  <!-- 留言按钮 -->
+  <view class='btn-container'>
+    <form name='pushMsgF' report-submit bindsubmit='orderSign'>
+      <button form-type="submit" class='btn-message' bindtap='btnmessage'>留言</button>
+    </form>
+  </view>
+
+  <!-- 提交信息 -->
+  <block wx:if="{{condition}}">
+    <view class='submit-messages'>
+      <view class='liuyan-text'>我的留言</view>
+      <!-- 提交留言相关信息 -->
+        <view class='message-content'>
+          <view class='head-container'>
+            <image class='user-hear-style'  src='{{avatarUrl}}'></image>
+          </view>
+          <!-- 用户名与留言内容 -->
+          <view class='username-message'>
+            <view class='username'>{{nickName}}</view>
+            <view class='message'>{{message}}</view>
+            <view class='delete-message' bindtap='deleter_message'>删除</view>
+          </view>
+        </view>
+    </view>
+  </block>
+</view>
+

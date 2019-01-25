@@ -1,0 +1,117 @@
+/* pages/write/write.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+
+/* 头部contain */
+.title-container{
+  width: 100%;
+}
+
+/* 文章标题 */
+.title-style{
+  font-size: 38rpx;
+  color: #000;
+  font-family: '微软雅黑';
+  margin-left: 20rpx;
+  padding-top: 35rpx;
+  padding-bottom: 40rpx;
+}
+
+/* 留言文本域container */
+.text-message-container{
+  width: 100%;
+  height: 250rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  background-color: #fff;
+}
+
+/* 文本框style */
+.textarea-style{
+  height: 200rpx;
+  font-size: 34rpx;
+  font-family: '微软雅黑'；
+}
+
+/* 留言提交区域 */
+.submit-area{
+  width: 100%;
+}
+
+/* 按钮容器 */
+.btn-container{
+  padding-top: 40rpx;
+}
+
+/* 留言按钮 */
+.btn-message{
+  width: 600rpx;
+  height: 90rpx;
+  font-size: 34rpx;
+  color: #fff;
+  background-color: rgb(104, 192, 4);
+}
+
+/* “我的留言”文字 */
+.liuyan-text{
+  font-size: 32rpx;
+  color: #ccc;
+  padding-left: 20rpx;
+  padding-top: 40rpx;
+}
+
+/* 留言内容container */
+.message-content{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+/* 头像container */
+.head-container{
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+/* 用户头像style */
+.user-hear-style{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* 用户名+留言内容 container */
+.username-message{
+  width: 500rpx;
+  padding-top: 14rpx;
+}
+
+/* 用户名style */
+.username{
+  font-size: 30rpx;
+  color: #ccc;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+}
+
+/* 用户留言内容 */
+.message{
+  font-size: 32rpx;
+  color: #000;
+  font-family: '微软雅黑';
+  padding-left: 10px;
+  padding-top: 6rpx;
+}
+
+/* 删除留言 */
+.delete-message{
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  padding-top: 8rpx;
+  font-family: '微软雅黑';
+  color: rgba(10, 113, 231, 0.685);
+}

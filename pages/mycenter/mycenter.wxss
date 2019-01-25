@@ -1,0 +1,429 @@
+/* pages/mycenter/mycenter.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+
+/* 提醒复制路径 */
+.remind-copy{
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  font-size:30rpx;
+  color: #cccccc;
+}
+
+/* 公众号所有信息 */
+.gong-content{
+  height: 160rpx;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+/* 公众号头像 */
+.gong-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-top: 14rpx;
+}
+
+/* 公众号文本信息 */
+.gong-message{
+  padding-left: 40rpx;
+  padding-top: 24rpx;
+}
+
+/* 公众号名称 */
+.gong-name{
+  font-size: 34rpx;
+  font-family: '微软雅黑'；
+}
+
+/* 公众号描述 */
+.gong-describe{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  width: 500rpx;
+  /* 超出文本隐藏 */
+  overflow:hidden;
+  /* 并显示省略号 */
+  text-overflow: ellipsis;
+  /* 不换行 */
+  white-space:nowrap;
+  color: rgb(179, 177, 177);
+  font-family: '微软雅黑'；
+}
+
+/* .from-bg{
+  background: rgb(67, 196, 8);
+} */
+
+.tui-accordion-content{
+  margin: 10px;
+  border: 1px solid #c8c7cc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tui-accordion-from{
+  padding-left: 0;
+}
+
+.tui-accordion-from input{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+/* .tui-input-name{
+  height: 80rpx;
+  float: left;
+  width: 200rpx;
+} */
+
+/*文字列表样式  */
+
+.tui-menu-list{
+  line-height: 80rpx;
+  color: #555;
+  font-size: 35rpx;
+  /* padding: 0 0rpx 0 10px; */
+  position: relative;
+}
+.tui-menu-list:before{
+  content: '';
+  display: block;
+  /* height: 1px; */
+  width: 100%;
+  background-color: #c8c7cc;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+.tui-menu-list:last-child:before{
+  height: 0;
+}
+/* 
+.tui-shangjiantou:after{
+  font-family:"iconfont" !important;
+  content: '\e734';
+  font-size: 40rpx;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+  right: 10rpx;
+} */
+
+/*清除浮动  */
+.tui-clear:after{
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+.tui-show{display: block;}
+.tui-hide{display: none;}
+
+/* 标签 */
+.title-container{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  font-size: 40rpx;
+  align-items: center;
+  padding-left: 20rpx;
+  background-color:  #fff;
+}
+
+.title{
+  font-size: 32rpx;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.des{
+  font-size: 32rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+/* 输入框 */
+.input-style1{
+  width: 90%;
+  height: 90rpx;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 上间隔 */
+.top-20{
+  margin-top: 20rpx;
+  width: 80%;
+}
+
+.descrbe{
+  width: 80%;
+}
+
+.articel-messages{
+  display: flex;
+  flex-direction: row;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  /* background: #fff; */
+  padding-bottom: 30rpx;
+}
+
+/* 上传公众号图片 */
+.post-image{
+  width: 400rpx;
+  height: 80rpx;
+  font-size: 34rpx;
+  margin-top: 50rpx;
+  color: #fff;
+  background-color: rgb(8, 43, 196);
+}
+
+/* 图片容器 */
+.img-container{
+  width: 90%;
+  display: flex;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+  padding-bottom: 40rpx;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  background: rgb(255, 213, 124);
+}
+
+/* 显示图片 */
+.display-img{
+  width: 80%;  
+  height: 400rpx;
+}
+
+/* 提交文章信息 */
+.post-atical-messages{
+  width: 80%;
+  font-size: 38rpx;
+  height: 100rpx;
+  color: #fff;
+  background-color: rgb(67, 196, 8);
+  padding: 5rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 留言内容container */
+.message-content{
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  margin-top: 40rpx;
+}
+
+/* 头像container */
+.head-container{
+  padding-left: 20rpx;
+}
+
+/* 用户名+留言内容 container */
+.username-message{
+  width: 450rpx;
+}
+
+/* 用户名style */
+.username{
+  font-size: 32rpx;
+  color: #ccc;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+}
+
+/* 用户留言内容 */
+.message{
+  font-size: 33rpx;
+  color: #000;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 6rpx;
+}
+
+/* 用户头像style */
+.user-hear-style{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* “用户留言”文字 */
+.user-message{
+  font-size: 34rpx;
+  padding-left: 20rpx;
+  padding-top: 40rpx;
+  color: #ccc;
+}
+
+/* 精选和回复 */
+.reply_container{
+  font-size: 32rpx;
+  color: rgb(0, 60, 255);
+  padding-top: 15rpx;
+}
+
+/* 精选 */
+.jinxuan{
+    padding-top: 10rpx;
+}
+
+/* 回复输入框样式 */
+.reply-input{
+  width: 500rpx;
+  font-size: 32rpx;
+  color: #000;
+  margin-top: 20rpx;
+  border: #ccc solid 2rpx;
+}
+
+/* 回复提示文字 */
+.reply-content{
+  width: 700rpx;
+  padding-top: 10rpx;
+  padding-left: 10rpx;
+  font-size: 30rpx;
+}
+
+/* 作者回复container */
+.reply-container{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+/* 作者回复图标 */
+.autor-reply-line{
+  width: 6rpx;
+  height: 26rpx;
+  background-color: rgb(76, 250, 7);
+  padding-top: 6rpx;
+}
+
+/* 回复按钮 */
+.btn_reply{
+  width: 100rpx;
+  height: 60rpx;
+  font-size: 22rpx;
+}
+
+/* “作者”字体style */
+.author-text{
+  font-size: 32rpx;
+  color: #ccc;
+  font-family: '微软雅黑';
+  padding-left: 10rpx;
+}
+
+/* 作者回复内容信息 */
+.author-reply-message{
+  width: 510rpx;
+  font-size: 34rpx;
+  color: #000;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 6rpx;
+}
+
+/* 删除 */
+.delete{
+  padding-top: 10rpx;
+}
+
+.pathText{
+  height: 100rpx;
+}
+
+.article-container{
+  width: 99%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+  /* border: 2rpx solid #000; */
+  background: #fff;
+}
+
+.article-img{
+  width: 200rpx;
+  height: 200rpx;
+  padding-left: 10rpx;
+  /* border: 2rpx solid #000; */
+}
+
+
+.articel-title{
+  display: -webkit-box;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  -webkit-line-clamp: 2;
+  /* 超出文本隐藏 */
+  overflow:hidden;
+  /* 并显示省略号 */
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.articelinfo{
+  width: 370rpx;
+  height: 200rpx;
+  padding-left: 20rpx;
+  /* border: 1px solid #000; */
+}
+
+.articel-descript{
+  display: -webkit-box;
+  width: 90%;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  color: rgb(199, 198, 198);
+  -webkit-line-clamp: 2;
+  /* 超出文本隐藏 */
+  overflow:hidden;
+  /* 并显示省略号 */
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  
+}
+
+.complie{
+  width: 150rpx; 
+  height: 75rpx; 
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  color: #1457d4;
+}
+
+.delete{
+  width: 150rpx; 
+  height: 75rpx; 
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  color: #1457d4;
+}

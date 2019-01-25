@@ -1,0 +1,7 @@
+  {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2c2d31",
+    "navigationBarTitleText": "留言筛选",
+    "navigationBarTextStyle": "write",
+    "enablePullDownRefresh": true
+  }

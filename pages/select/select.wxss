@@ -1,0 +1,73 @@
+/* pages/select/select.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+
+.bg{
+  margin-top: 40rpx;
+}
+
+.center-space{
+  height: 30rpx;
+  background: #F5F5F5;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  height: 180rpx;
+  line-height: 180rpx;
+  background-color: #fff;
+  /* align-items: center; */
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.post-actical{
+  width: 70%;
+  height: 100rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background: rgb(33, 110, 211);
+}
+
+.look-message{
+  width: 70%;
+  height: 100rpx;
+  font-size: 40rpx;
+  margin-top: 40rpx;
+  color: #fff;
+  background: rgb(33, 110, 211);
+}
+
+.article-opertor{
+  width: 100%;
+  background: #fff;
+  padding-left: 20rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  font-size: 36rpx;
+  border-bottom: 2rpx #F5F5F5 solid;
+}
+
+.messages-opertor{
+  width: 100%;
+  background: #fff;
+  padding-left: 20rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  font-size: 36rpx;
+  border-bottom: 2rpx #F5F5F5 solid;
+}

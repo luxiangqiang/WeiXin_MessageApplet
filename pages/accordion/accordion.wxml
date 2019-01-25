@@ -1,0 +1,55 @@
+<!--pages/accordion/accordion.wxml-->
+<view class="tui-accordion-content">
+  <view class="tui-menu-list {{isShowFrom1 ? 'tui-shangjiantou' : 'tui-xiajiantou'}}">
+    <view bindtap="showFrom" data-param="1"><text>表单</text></view>
+    <view class="tui-accordion-from {{isShowFrom1 ? '' : 'tui-hide'}}">
+      <view class="tui-menu-list tui-clear">
+        <text class="tui-input-name">input</text>
+        <input placeholder="普通输入框"></input>
+      </view> 
+      <view class="tui-menu-list tui-clear">
+        <text class="tui-input-name">input</text>
+        <input placeholder="普通输入框"></input>
+      </view> 
+      <view class="tui-menu-list tui-clear">
+        <text class="tui-input-name">input</text>
+        <input placeholder="普通输入框"></input>
+      </view> 
+      <view class="tui-menu-list tui-clear" style="text-align:center;padding-top:20rpx;">
+        <button size="mini" type="primary">确定</button>
+        <button size="mini" style="margin-left:10rpx;">取消</button>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="tui-menu-list {{isShowFrom2 ? 'tui-shangjiantou' : 'tui-xiajiantou'}}">
+    <view bindtap="showFrom" data-param="2"><text>轮播图片</text></view>
+    <view class="{{isShowFrom2 ? '' : 'tui-hide'}}">
+      <swiper class="tui-swiper" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+            indicator-color="#777" indicator-active-color="red">
+        <block wx:for-items="{{banner_url}}">
+          <swiper-item>
+            <block wx:if="{{item}}">
+              <image class="tui-img" src="{{item}}"  mode="aspectFill"/>
+            </block>
+            <block wx:else>
+              <image src="../../images/default_pic.png" mode="aspectFill"></image>
+            </block>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="tui-menu-list {{isShowFrom3 ? 'tui-shangjiantou' : 'tui-xiajiantou'}}">
+    <view bindtap="showFrom" data-param="3"><text>文字排版</text></view>
+    <view class="{{isShowFrom3 ? '' : 'tui-hide'}}">
+      <view class="tui-h1"><text>H1 标签内文字大小及加粗样式</text></view>
+      <view class="tui-h2"><text>H2 标签内文字大小及加粗样式</text></view>
+      <view class="tui-h3"><text>H3 标签内文字大小及加粗样式</text></view>
+      <view class="tui-h4"><text>H4 标签内文字大小及加粗样式</text></view>
+      <view class="tui-h5"><text>H5 标签内文字大小及加粗样式</text></view>
+      <view class="tui-h6"><text>H6 标签内文字大小及加粗样式</text></view>
+      <view class="tui-p"><text>P 标签内文字大小及加粗样式</text></view>
+    </view>
+  </view> -->
+</view>

@@ -1,0 +1,244 @@
+/* pages/mycenter/mycenter.wxss */
+
+/* 文章题目 */
+.title-style{
+  font-size: 38rpx;
+  color: #000;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 35rpx;
+  padding-bottom: 40rpx;
+}
+
+.post {
+  float: right;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;  
+  border: 0 solid #ffffff;
+  border-radius: 500px;
+  box-shadow: 4px 1px 1px #cccccc;
+}
+
+/* 长按复制 */
+.path{
+  display: flex;
+  width: 100%;
+  height: 150rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  justify-content:center; 
+  align-items:center;
+  color: rgba(71, 69, 69, 0.26);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 下划线 */
+.line{
+  width: 90%;
+  margin-left: 20rpx;
+  border-bottom: 2rpx solid #000;
+}
+
+/* 空格 */
+.space{
+  width: 100%;
+  height: 20rpx;
+  background-color:  rgba(238, 238, 238, 0.281);
+}
+
+
+/* 标签 */
+.title-container{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  font-size: 40rpx;
+  align-items: center;
+  padding-left: 20rpx;
+  background-color:  rgba(238, 238, 238, 0.281);
+}
+
+/* 输入框 */
+.input-style1{
+  width: 90%;
+  height: 90rpx;
+  padding-left: 20rpx;
+}
+
+/* 上间隔 */
+.top-20{
+  margin-top: 20rpx;
+}
+
+/* 上传公众号图片 */
+.post-image{
+  width: 400rpx;
+  height: 80rpx;
+  font-size: 34rpx;
+  margin-top: 50rpx;
+  color: #fff;
+  background-color: rgb(8, 43, 196);
+}
+
+/* 图片容器 */
+.img-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+/* 显示图片 */
+.display-img{
+  width: 80%;  
+  height: 400rpx;
+}
+
+/* 提交文章信息 */
+.post-atical-messages{
+  width: 98%;
+  height: 90rpx;
+  color: #fff;
+  background-color: rgb(67, 196, 8);
+  margin-top: 40rpx;
+}
+
+/* 背景颜色 */
+.backgroundcolor{
+  background: rgba(238, 238, 238, 0.281);
+}
+
+/* 留言内容container */
+.message-content{
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  padding-top: 40rpx;
+}
+
+/* 头像container */
+.head-container{
+  padding-left: 20rpx;
+}
+
+/* 用户名+留言内容 container */
+.username-message{
+  width: 450rpx;
+}
+
+/* 用户名style */
+.username{
+  font-size: 32rpx;
+  color: #ccc;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+}
+
+/* 用户留言内容 */
+.message{
+  font-size: 33rpx;
+  color: #000;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 6rpx;
+}
+
+/* 用户头像style */
+.user-hear-style{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* “用户留言”文字 */
+.user-message{
+  width: 100%;
+  height: 50rpx;
+  font-size: 34rpx;
+  color: #ccc;
+  padding: 40rpx 0 20rpx 20rpx;
+}
+
+/* 精选和回复 */
+.reply_container{
+  font-size: 32rpx;
+  color: rgb(0, 60, 255);
+  padding-top: 15rpx;
+}
+
+/* 精选 */
+.jinxuanblue{
+    padding-top: 10rpx;
+}
+
+.jinxuanred{
+    padding-top: 10rpx;
+    color: red;
+}
+
+/* 回复输入框样式 */
+.reply-input{
+  width: 500rpx;
+  font-size: 32rpx;
+  color: #000;
+  margin-top: 20rpx;
+  border: #ccc solid 2rpx;
+}
+
+/* 回复提示文字 */
+.reply-content{
+  width: 700rpx;
+  padding-top: 10rpx;
+  padding-left: 10rpx;
+  font-size: 30rpx;
+}
+
+/* 作者回复container */
+.reply-container{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+/* 作者回复图标 */
+.autor-reply-line{
+  width: 6rpx;
+  height: 26rpx;
+  background-color: rgb(76, 250, 7);
+  padding-top: 9rpx;
+}
+
+/* 回复按钮 */
+.btn_reply{
+  width: 100rpx;
+  height: 60rpx;
+  font-size: 22rpx;
+  background: rgb(54, 173, 6);
+  color: #fff;
+}
+
+/* “作者”字体style */
+.author-text{
+  font-size: 32rpx;
+  color: #ccc;
+  font-family: '微软雅黑';
+  padding-left: 10rpx;
+}
+
+/* 作者回复内容信息 */
+.author-reply-message{
+  width: 510rpx;
+  font-size: 34rpx;
+  color: #000;
+  font-family: '微软雅黑';
+  padding-left: 20rpx;
+  padding-top: 6rpx;
+}
+
+/* 删除 */
+.delete{
+  padding-top: 10rpx;
+}

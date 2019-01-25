@@ -1,0 +1,20 @@
+<!--pages/select/select.wxml-->
+
+<!-- <view class='bg'>
+  <button class='post-actical' bindtap='postArtical'>发表文章</button>
+  <button class='look-message' bindtap='lookMessage'>筛选留言</button>
+</view> -->
+
+<view class='userinfo'>
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+  <view>
+    <text class="userinfo-nickname">{{nickName}}</text>
+  </view>
+</view> 
+<view class='center-space'></view>
+
+<view class='opertor'>
+  <view class='article-opertor' bindtap='articelOpertor'>文章管理</view>
+  <view class='messages-opertor' bindtap='messagesOpertor'>留言管理</view>
+</view>
+

@@ -1,0 +1,61 @@
+/* pages/myartical/myartical.wxss */
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+.wite-space{
+  width: 100%;
+  height: 40rpx;
+  background-color: rgba(238, 238, 238, 0.281);
+}
+
+/* 文章发表时间 */
+.artical-time{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 28rpx;
+  padding-bottom: 15rpx;
+  align-items: center;
+  color: rgb(201, 200, 200);
+  background-color: rgba(238, 238, 238, 0.281);
+}
+
+/* 文章容器container */
+.artical-container{
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 文章插图容器 */
+.artical-img-container{
+   width: 100%;
+}
+
+/* 图片内容 */
+.artical-img{
+  width: 100%;  
+  height: 450rpx;
+}
+
+/* 文章标题 */
+.artical-title{
+  width: 90%;
+  font-size: 36rpx;
+  font-family: '微软雅黑';
+  color: black;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+}
+
+/* 文章描述 */
+.artical-describe{
+  width: 90%;
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+}

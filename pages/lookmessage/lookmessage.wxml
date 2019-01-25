@@ -1,0 +1,83 @@
+<!--pages/lookmessage/lookmessage.wxml-->
+
+<view class='title-style'>{{title}}</view>
+<!-- 空白 -->
+<view class='space'></view>
+ <!-- 悬浮图标主页 -->
+ <icon type="waiting" size="50" class="post" bindtap="onPostClick"/>
+<!-- 复制小程序文章路径 -->
+<!-- <view class='path'  bindlongtap='copy'>
+  <text>长按该区域复制文章路径</text>
+  <text selectable='true'></text>
+</view> -->
+<!-- pages/message/message?title={{title}}&no={{pathNo}} -->
+
+<!-- 空白 -->
+<!-- <view class='space'></view> -->
+
+<!-- “用户留言文字” -->
+<view class='user-message'>用户留言</view>
+
+<!-- 空白 -->
+<view class='space'></view>
+
+<!-- 留言内容 作者回复  {{item.headimage}} {{item.username}} {{item.userMesContent}}-->
+<block wx:for="{{messages}}" wx:key="key" wx:for-item="item" wx: for-index="index">
+  <view class='backgroundcolor'>
+    <view class='message-content'>
+      <!-- 用户头像 -->
+      <view class='head-container'>
+        <image class='user-hear-style'  src=' {{item.headimage}}'></image>
+      </view>
+
+      <!-- 用户名与留言内容 -->
+      <view class='username-message' >
+        <view class='username'>{{item.username}}</view>
+        <view class='message'> {{item.userMesContent}}</view>
+        <!-- 作者回复 -->
+      <block wx:if="{{authorBool[index]}}">
+        <view>
+          <!-- 回复图标 -->
+          <view class='reply-container'>
+            <view class='autor-reply-line'></view>
+            <view class='author-text'>作者</view>
+          </view>
+          <!-- 作者回复内容  -->
+          <view class='author-reply-message'>{{authormessages[index]}}</view>
+        </view>
+      </block>
+      </view> 
+
+      <!-- 作者回复提交 -->
+      <view class='reply_container'>
+        <block wx:if="{{!authorBool[index]}}">
+          <form name='pushMsgFm' report-submit bindsubmit='orderSign'>
+            <button form-type="submit" class='btn_reply' bindtap="showModal" data-index="{{index}}">回复</button>
+            <!-- <button form-type="submit" bindtap="showModal" data-index="{{index}}">回复</buttton> -->
+          </form>
+        </block>
+        <block wx:if="{{!isChoose[index]}}">
+        <view bindtap='choose' class='jinxuanblue' data-index='{{index}}'>设置精选</view>
+        </block>
+        <block wx:if="{{isChoose[index]}}">
+          <view bindtap='cancelChoose' class='jinxuanred' data-index='{{index}}'>取消精选</view>
+        </block>
+        <!-- 置顶 -->
+        <block wx:if="{{!isTop[index]}}">
+        <view bindtap='settop' class='jinxuanblue' data-index='{{index}}'>留言置顶</view>
+        </block>
+        <!-- 取消置顶 -->
+        <block wx:if="{{isTop[index]}}">
+        <view bindtap='canceltop' class='jinxuanred' data-index='{{index}}'>取消置顶</view>
+        </block>
+        <view bindtap='deleteMessage' class='delete' data-index='{{index}}'>删除</view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<view>
+  <modal title="回复 读者" style='color: #000;font-size: 32rpx;' hidden="{{modalHidden}}" confirm-text="确定" cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">
+  <view class='reply-content'>回复的内容将通过服务通知发送给读者</view>
+  <input bindinput='getInputContent' class='reply-input' placeholder='请输入点什么...' value='{{inputContentxml}}' placeholder-style='font-size: 28rpx;'></input></modal>
+</view>

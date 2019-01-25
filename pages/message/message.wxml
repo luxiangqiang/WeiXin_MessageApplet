@@ -1,0 +1,70 @@
+<!--pages/message/message.wxml-->
+  <!-- <view>
+    <image bindtap='adddetial'  class="add_icon" src="../../images/主页.png"></image>
+  </view> -->
+
+  <view class='title-style'>{{title}}</view>
+   <view wx:if="{{!hasUserInfo && canIUse}}">
+   <button class='bottom' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权后才能查看留言</button>
+  </view>
+<block wx:else>
+ <!-- 悬浮图标主页 -->
+ <icon type="waiting" size="50" class="post" bindtap="onPostClick"/>
+  <view class='messages-container'>
+  <!-- 精选留言 写留言 -->
+    <view class='head-contain'>
+      <view class='select-message'>精选留言</view>
+      <view class='write-message' bindtap='writemessage'>写留言</view>
+    </view>
+    <view class='message-top'></view>
+    <block wx:for="{{messages}}" wx:key="key" wx:for-item="item" wx:for-index="index">
+      <view class='jiange'>
+        <!-- 留言内容 作者回复 -->
+        <view class='message-content'>
+          <!-- 用户头像 -->
+          <view class='head-container'> 
+            <image class='user-hear-style'  src='{{item.headimage}}'></image>
+          </view>
+          <!-- 用户名与留言内容 -->
+          <view class='username-message'>
+            <view class='clumen'>
+              <view class='username'>{{item.username}}</view>
+              <block wx:if="{{isTop[index]}}">
+                <view  class='set-top'>置顶</view>
+              </block>
+            </view>
+            <view>
+              <view class='message'>{{item.userMesContent}}</view>
+            </view>
+          </view>
+          <!-- 点赞 -->
+          <block wx:if="{{ishave}}">
+            <view class='ico_zan'>
+              <view wx:if="{{status[index]}}"><image data-index="{{index}}" class='zan' bindtap='setGood' src='../../images/zan1.png'></image></view>
+              <view wx:else><image data-index="{{index}}" class='zan' bindtap='setGood' src='../../images/zan2.png'></image></view>
+            </view>
+            <!-- 点赞计数 -->
+            <view class='ico_num' >
+              <view wx:if="{{goodarray[index]!=0}}">{{goodarray[index]}}</view>
+              <view wx:else></view>
+            </view>
+          </block>
+        </view>
+        <!-- 作者回复 -->
+        <block wx:if="{{authorBool[index]}}">
+          <view>
+              <!-- 回复图标 -->
+              <view class='reply-container'>
+                <view class='autor-reply-line'></view>
+                <view class='author-text'>作者</view>
+              </view>
+              <!-- 作者回复内容 -->
+              <view class='reply-message'>{{authormessages[index]
+      }}</view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</block>
+

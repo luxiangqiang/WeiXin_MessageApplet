@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<import src="/wxSearch/wxSearch.wxml"/>
+<template is="wxSearch" data="{{wxSearchData}}"/>
+<import src="../../wxSearch/wxSearch.wxml"  />
+
+
+
+<template is="wxSearch" data="{{wxSearchData}}"  />
+
+<view wx:if="{{!hasUserInfo && canIUse}}">
+  <view class='header'>
+      <image src='../../images/2.jpg'></image>
+  </view>
+  <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+  </view>
+    <!-- <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo"> -->
+  <button class='bottom' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录授权    </button>
+</view>
+ 
+<block wx:else>
+<!-- 搜索框 -->
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search"/>
+            <input type="text" class="weui-search-bar__input" placeholder="点击进行公众号搜索" value="{{wxSearchData.value}}"
+                   bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur"  />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="remind-copy">长按复制公众号,可以去微信搜索关注</view>
+    <view class='userinfo'>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </view> 
+    <view class='center-space'></view>
+
+    <block wx:for="{{gongMessage}}" wx:for-item="item">
+      <view class='center-space-gong'></view>
+      <!-- 公众号信息 -->
+      <view class='gong-content' bindtap='to_articel_list' data-index="{{index}}" bindlongtap='copy' bindtouchend="touchend">
+        <view>
+          <image class='gong-img' src="{{item.headpath}}"></image>
+        </view>
+        <view class='gong-message'>
+          <view class='gong-name'>{{item.name}}</view>
+          <view class='gong-describe'>{{item.describes}}</view>
+          <text selectable='true'></text>
+        </view>
+      </view>
+    </block>
+    <!-- 悬浮后台图标 -->
+    <icon type="safe_warn" size="50" class="post" bindtap="showModal"/>
+    <!-- <view class='background-color'>
+      <view class='admin' bindtap='showModal'>留言板后台管理中心</view>
+    </view> -->
+  </block>
+<view>
+  <modal title="后台登录" style='color: #000;font-size: 32rpx;' hidden="{{modalHidden}}" confirm-text="确定" cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">
+  <view class='reply-content' >只有管理员才能进行登录，您的ip地址已记录。</view>
+  <input bindinput='getInputContent' class='reply-input' placeholder='请输入密码' value='{{inputContent}}' placeholder-style='font-size: 32rpx;'></input></modal>
+</view>

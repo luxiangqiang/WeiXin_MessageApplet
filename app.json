@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mycenter/mycenter",
+    "pages/select/select",
+    "pages/lookmessage/lookmessage",
+    "pages/myartical/myartical",
+    "pages/message/message",
+    "pages/write/write",
+    "pages/artical/artical",
+    "pages/logs/logs"
+  ],
+  
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#2c2d31",
+    "navigationBarTitleText": "小鹿留言板",
+    "navigationBarTextStyle":"write"
+  }
+}
