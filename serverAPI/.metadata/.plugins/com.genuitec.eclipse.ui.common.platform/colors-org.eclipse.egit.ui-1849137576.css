@@ -1,0 +1,29 @@
+/*******************************************************************************
+* Copyright (c) 2014, 2015 Andrea Guarinoni and others.
+* All rights reserved. This program and the accompanying materials
+* are made available under the terms of the Eclipse Public License v1.0
+* which accompanies this distribution, and is available at
+* http://www.eclipse.org/legal/epl-v10.html
+*
+* Contributors:
+*     Andrea Guarinoni - initial API and implementation
+*     Fabio Zadrozny - Bug 465672 - EGit staging view and commit page are not properly styled
+*     Lars Vogel <Lars.Vogel@vogella.com> - Bug 466486
+*******************************************************************************/
+
+/* ############################## EGIT preferences ############################## */
+
+
+
+#org-eclipse-egit-ui-StagingView StyledText,
+Form Section LayoutComposite StyledText
+{
+background-color: #2c3135;
+color: #d8dcdf;
+}
+
+PushResultTable-SpellcheckableMessageAreaExtension StyledText {
+background-color: #2c3135;
+color: #d8dcdf;
+}
+
