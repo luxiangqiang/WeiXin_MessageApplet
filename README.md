@@ -12,6 +12,10 @@
 
 
 
+※ 体验留言小程序，即可搜索：<u>小鹿留言助手</u>
+
+
+
 ## 小程序端
 
 ### 1、小程序端目录结构
@@ -51,7 +55,7 @@
 
 ##### ▉ 示意图：
 
-![](/printScreen/index.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/index.jpg)
 
 
 
@@ -106,10 +110,6 @@
 
 
 
-##### ▉ 服务器端 API
-
-
-
 #### 2.2 文章列表（artical）
 
 > 该页面主要显示进入该公众号的历史文章列表。
@@ -118,7 +118,7 @@
 
 ##### ▉ 示意图：
 
-![](/printScreen/articel.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/articel.jpg)
 
 
 
@@ -157,7 +157,7 @@ wx.request({
 
 ##### ▉ 示意图：
 
-![](/printScreen/messages.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/messages.jpg)
 
 
 
@@ -213,7 +213,7 @@ wx.request({
 
 ##### ▉ 示意图：
 
-![](/printScreen/write.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/write.jpg)
 
 
 
@@ -264,7 +264,7 @@ wx.request({
 
 基本的逻辑就是在主界面右下角输入密码。如图：
 
-![](/printScreen/houtai.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/houtai.jpg)
 
 
 
@@ -278,13 +278,13 @@ wx.request({
 
 服务器验证通过后，进入操作选择界面（`select `页面）。
 
-![](/printScreen/select.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/select.jpg)
 
 进入文章管理页面（`mycenter` 页面），可以进行发布文章，发布文章按钮是可以折叠的。如下：
 
 
 
-![](/printScreen/writeArticel.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/writeArticel.jpg)
 
 
 
@@ -325,13 +325,13 @@ wx.request({
 
 文章的配图、标题、描述，然后即可上传服务器。收起发布文章的折叠按钮，下方即将显示已经发布的历史文章。如下：
 
-![](/printScreen/articelList.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/articelList.jpg)
 
 我们通过长按路径，在公众号发表文章的时候即可将路径填入小程序的链接中，用户点击留言，直接跳转到该文章的留言页面进行留言。
 
 返回我们选择进入留言管理页面，进入留言筛选，首先要知道你要筛选那个文章下的留言，所以先出现一个筛选文章列表，点击该列表进入对该文章的留言筛选，（`myartical `页面为文章筛选列表）。如图：
 
-![](/printScreen/selectArticel.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/selectArticel.jpg)
 
 
 
@@ -357,7 +357,7 @@ wx.request({
 
 下面进入某篇文章下的留言筛选页面（`lookmessage` 页面）。如图：
 
-![](/printScreen/liuyanshaixuan.jpg)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/liuyanshaixuan.jpg)
 
 管理员可以在页面进行筛选、置顶、回复等操作了。
 
@@ -505,7 +505,7 @@ onLoad: function (options) {
 
 > 该表存储的是公众号关联的相关信息表，字段包括 id(主键ID)、name（公众号名）、headpath（公众号头像路径）、describes（公众号描述）、password（后台密码）、openid（公众号主的openID唯一标识）、fromid（模板ID）、token（token 验证字段）。表的设计结构如下：
 
-![](/printScreen/gonginfoTable.png)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/gonginfoTable.png)
 
 
 
@@ -513,7 +513,7 @@ onLoad: function (options) {
 
 > 该表主要存储的是每篇文章的相关信息，字段包括 no（主键，文章编号）、title（文章标题）、describ（文章描述）、imageTitle（文章配图）、date（文章日期）、g_id（公众号id）——这里没有关联两个表，重新创建的与另一个表的 ID。表的设计结构如下：
 
-![](/printScreen/articelTable.png)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/articelTable.png)
 
 
 
@@ -523,7 +523,7 @@ onLoad: function (options) {
 
 字段包括 p_id(主键)、title(文章标题)、username（用户名）、headimage（用户头像路径）、userMesContent（用户留言内容）、authorMesContent（作者回复内容）、no（文章编号）、isCheck（是否精选）、goodnum（可去掉）、ispraise（可去掉）、isTop（置顶标识）、g_id（公众号id）、zanCount（点赞数量）、fromid（模板id）、token（token验证值）。
 
-![](/printScreen/messgaesTable.png)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/messgaesTable.png)
 
 
 
@@ -539,7 +539,7 @@ onLoad: function (options) {
 > - ThreadGetdata: 线程类，获取 token
 > - util：工具类，链接数据库之类的。
 
-![](/printScreen/houtaimulu.png)
+![](https://github.com/luxiangqiang/WeiXin_MessageApplet/blob/master/printScreen/houtaimulu.png)
 
 
 
