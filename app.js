@@ -8,7 +8,7 @@ App({
     // 登录
     //获取openid
     var user = wx.getStorageSync('user') || {};
-    if (!user.openid || (user.expires_in || Date.now()) < (Date.now() + 600)) {//不要在30天后才更换openid-尽量提前10分钟更新
+    if (!user.openid || (user.expires_in || Date.now()) < (Date.now() + 600)) { //不要在30天后才更换openid-尽量提前 10 分钟更新
       wx.login({
         success: function (res) {
           // success
