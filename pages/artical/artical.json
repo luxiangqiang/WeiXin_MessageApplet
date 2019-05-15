@@ -2,6 +2,6 @@
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#2c2d31",
   "navigationBarTitleText": "文章列表",
-  "navigationBarTextStyle": "write",
+  "navigationBarTextStyle": "black",
   "enablePullDownRefresh": true
 }

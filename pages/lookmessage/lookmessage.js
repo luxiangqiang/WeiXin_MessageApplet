@@ -473,14 +473,14 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面加载
+   * 生命周期函数 -- 监听页面加载
    *  功能：获取已留言未回复用户。
    */
   onLoad: function (options) {
     var that = this;
-    var title = options.title;//文章标题
-    var nos = options.no;   //文章编号
-    var ids = options.id;//公众号id
+    var title = options.title;// 文章标题
+    var nos = options.no;   // 文章编号
+    var ids = options.id;// 公众号id
     that.setData({
       no: nos,
       title: title,

@@ -20,6 +20,7 @@ Page({
       id: g_id
     })
     
+    // 获取文章列表
     wx.request({
       url: '自己服务器API', //获取文章列表
       data: {

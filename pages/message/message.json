@@ -3,7 +3,7 @@
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#2c2d31",
   "navigationBarTitleText": "留言区",
-  "navigationBarTextStyle": "write",
+  "navigationBarTextStyle": "black",
   "enablePullDownRefresh": true
 
 }

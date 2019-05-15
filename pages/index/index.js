@@ -17,10 +17,10 @@ Page({
   },
 
 
-  //事件处理函数
+  //事件处理函数 登录日志
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      
     })
   },
 

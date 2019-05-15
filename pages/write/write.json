@@ -2,6 +2,6 @@
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#2c2d31",
   "navigationBarTitleText": "写留言",
-  "navigationBarTextStyle": "write",
+  "navigationBarTextStyle": "black",
   "enablePullDownRefresh": true
 }
